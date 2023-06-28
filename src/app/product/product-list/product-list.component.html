@@ -1,0 +1,30 @@
+
+  <button class="btn-create" (click)="btnCreate()">Product-create</button>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>sku</th>
+      <th>name</th>
+      <th>stock</th>
+      <th>value</th>
+      <th class="th-btn">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.sku }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.stock }}</td>
+      <td>{{ product.value }}</td>
+      <td class="td-btn">
+        <button class="btn-1" (click)="btnEdit(product.id)">Editar</button>
+        <button class="btn-2" (click)="btnExcluir(product.id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

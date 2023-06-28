@@ -1,0 +1,45 @@
+<div *ngIf="product">
+  <form [formGroup]="form">
+    <div class="container">
+      <h2>Products</h2>
+      <div class="field">
+        <label for="">Sku</label>
+        <input type="text" formControlName="sku" />
+      </div>
+
+      <!-- <div class="field">
+        <label for="">id</label>
+        <input type="text" formControlName="id" class="input-desabled" />
+      </div> -->
+
+      <div class="field">
+        <label for="">Stock</label>
+        <input type="number" formControlName="stock" />
+      </div>
+
+      <div class="field">
+        <label for="">Nome</label>
+        <input type="text" formControlName="name" />
+      </div>
+
+      <div class="field">
+        <label for="">Descrição</label>
+        <input type="text" formControlName="description" />
+      </div>
+
+      <div class="field">
+        <label for="">Valor</label>
+        <input type="text" formControlName="value" />
+      </div>
+
+      <button (click)="submit()">Editar</button>
+    </div>
+  </form>
+</div>
+
+<!-- "id": 1,
+      "name": "Notbook",
+      "description": "Notbook lenovo 20 polegadas",
+      "stock": 1,
+      "sku": "1",
+      "value": 100.00 -->

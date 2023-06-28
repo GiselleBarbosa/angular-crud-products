@@ -1,0 +1,51 @@
+<div>
+  <form [formGroup]="form">
+    <div class="container">
+      <h2>Products</h2>
+      <div class="field">
+        <label for="">Sku</label>
+        <input type="text" formControlName="sku" [ngClass]="form.controls.sku.invalid && (form.controls.sku.touched || form.controls.sku.dirty) ? 'field-invalid' : 'valid'  "  />
+
+        <div *ngIf="form.controls.sku.invalid && (form.controls.sku.touched || form.controls.sku.dirty)">
+          <span class="invalid-feedback">Field invalid</span>
+        </div>
+
+      </div>
+
+
+      <!-- <div class="field">
+        <label for="">id</label>
+        <input type="text" formControlName="id"/>
+      </div> -->
+
+      <div class="field">
+        <label for="">Stock</label>
+        <input type="number" formControlName="stock" [ngClass]="form.controls.stock.invalid && (form.controls.stock.touched || form.controls.stock.dirty) ? 'field-invalid' : 'valid'  " />
+      </div>
+
+      <div class="field">
+        <label for="">Nome</label>
+        <input type="text" formControlName="name" [ngClass]="form.controls.name.invalid && (form.controls.name.touched || form.controls.name.dirty) ? 'field-invalid' : 'valid'  " />
+      </div>
+
+      <div class="field">
+        <label for="">Descrição</label>
+        <input type="text" formControlName="description"[ngClass]="form.controls.description.invalid && (form.controls.description.touched || form.controls.description.dirty) ? 'field-invalid' : 'valid'  "  />
+      </div>
+
+      <div class="field">
+        <label for="">Valor</label>
+        <input type="text" formControlName="value"[ngClass]="form.controls.value.invalid && (form.controls.value.touched || form.controls.value.dirty) ? 'field-invalid' : 'valid'  "  />
+      </div>
+
+      <button (click)="create()">Criar</button>
+    </div>
+  </form>
+</div>
+
+<!-- "id": 1,
+          "name": "Notbook",
+          "description": "Notbook lenovo 20 polegadas",
+          "stock": 1,
+          "sku": "1",
+          "value": 100.00 -->
